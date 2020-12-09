@@ -1,203 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculo de juros 01</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            -webkit-box-sizing: border-box;
-            font-family: "Fira Code Retina",sans-serif;
-        }
-        @media (max-width: 820px) {
-            /*primeiro conteiner*/
-            body{
-                background-color: black;
-            }
-            .content{
-                background-color: #333;
-                max-width: 100%;
-                min-height: 100%;
-                color:#fff;
-                display: flex;
-                flex-direction: column;
-                font-size: 14px;
-            }
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculo de juros 01</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			font-family: "Fira Code Retina", sans-serif;
 
-            .box{
-                min-width: 100%;
-                min-height: 100%;
-            }
-            .entrada_dados{
-                min-width: 100%;
-                min-height: 100%;
-                margin-bottom: 0;
+		}
 
-            }
+		@media (max-width: 820px) {
 
-            button{
-                margin: 0 auto;
-            }
-            .saida_dados>p{
-                margin-top: 0;
-            }
-            /*segundo conteiner*/
-        }
-        body{
-            background-color: #333;
-            display: flex;
-            align-items: center;
-            width: 100%;
-            min-height: 100vh;
-            color:#fff;
-       }
-       .content{
-           background: black;
-           width: 1200px;
-           height: 80%;
-           display: flex;
-           margin: 0 auto;
-           box-shadow: 0 -1.2px 5px 5px #626262;
-       }
-        .entrada_dados{
-            width: 70%;
-            background: #333;
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: column;
-            padding: 10px;
-        }
-        .saida_dados{
-            background: black;
-            width: 100%;
-            height: 100%;
-            padding: 10px
-        }
-        .conta_deposito{
-            background: black;
-            color: aqua;
-            text-align: center;
-            margin-top: 10px;
+			/*primeiro conteiner*/
+			body {
+				background-color: black;
+			}
 
-        }
-        /*titulo 01*/
-        .entrada_dados>h2{
-            max-width: 800%;
-            text-align: center;
-            text-transform: capitalize;
-            margin: 0 auto 20px;
-        }
-        /*estilizando form*/
-        .entrada_dados>form{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .input{
-            width: 100%;
-            height: 30px;
-            background: transparent;
-            margin-bottom: 15px;
-            border: none;
-            color: white;
-            border-bottom: 1px solid aqua;
-        }
-        label{
-            width: 100%;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-        /*estilizando button*/
-        button{
-            background: transparent;
-            color: white;
-            border: 1px solid aqua;
-            width: 150px;
-            height: 40px;
-            border-radius: 15px;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        button:hover{
-            color: aqua;
-            border: 1px solid white;
-            text-decoration: underline;
-        }
-        /*saida de dados*/
-        .saida_dados>h2{
-            max-width: 800px;
-            text-align: center;
-            text-transform: capitalize;
-            margin-bottom: 90px;
-        }
-        .saida_dados>p{
-            margin-top: 40px;
-            font-size: 20px;
-        }
-        span{
-            color: aqua;
-        }
-        hr{
-            color: aqua;
-            border: 2px solid aqua;
-        }
-    </style>
+			.content {
+				background-color: #333;
+				max-width: 100%;
+				min-height: 100%;
+				color: #fff;
+				display: flex;
+				flex-direction: column;
+				font-size: 14px;
+			}
+
+			.box {
+				min-width: 100%;
+				min-height: 100%;
+			}
+
+			.entrada_dados {
+				min-width: 100%;
+				min-height: 100%;
+				margin-bottom: 0;
+
+			}
+
+			button {
+				margin: 0 auto;
+			}
+
+			.saida_dados>p {
+				margin-top: 0;
+			}
+
+			/*segundo conteiner*/
+		}
+
+		body {
+			background-color: #333;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			min-height: 100vh;
+			color: #fff;
+		}
+
+		.content {
+			background: black;
+			width: 1200px;
+			height: 80%;
+			display: flex;
+			margin: 0 auto;
+			box-shadow: 0 -1.2px 5px 5px #626262;
+		}
+
+		.entrada_dados {
+			width: 70%;
+			background: #333;
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			padding: 10px;
+		}
+
+		.saida_dados {
+			background: black;
+			width: 100%;
+			height: 100%;
+			padding: 10px
+		}
+
+		.conta_deposito {
+			background: black;
+			color: aqua;
+			text-align: center;
+			margin-top: 10px;
+
+		}
+
+		/*titulo 01*/
+		.entrada_dados>h2 {
+			max-width: 800%;
+			text-align: center;
+			text-transform: capitalize;
+			margin: 0 auto 20px;
+		}
+
+		/*estilizando form*/
+		.entrada_dados>form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.input {
+			width: 100%;
+			height: 30px;
+			background: transparent;
+			margin-bottom: 15px;
+			border: none;
+			color: white;
+			border-bottom: 1px solid aqua;
+		}
+
+		label {
+			width: 100%;
+			font-size: 1.2rem;
+			margin-bottom: 10px;
+		}
+
+		/*estilizando button*/
+		button {
+			background: transparent;
+			color: white;
+			border: 1px solid aqua;
+			width: 150px;
+			height: 40px;
+			border-radius: 15px;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+
+		button:hover {
+			color: aqua;
+			border: 1px solid white;
+			text-decoration: underline;
+		}
+
+		/*saida de dados*/
+		.saida_dados>h2 {
+			max-width: 800px;
+			text-align: center;
+			text-transform: capitalize;
+			margin-bottom: 90px;
+		}
+
+		.saida_dados>p {
+			margin-top: 40px;
+			font-size: 20px;
+		}
+
+		span {
+			color: aqua;
+		}
+
+		hr {
+			color: aqua;
+			border: 2px solid aqua;
+		}
+
+	</style>
 </head>
+
 <body>
-    <div class="content">
-    <div class="box entrada_dados">
-        <h2 class="titulo01">calcular valor de uma obrigação atrasada a ser paga atraves de um boleto bancario.</h2>
-        <form>
-            <label for="valorBole">1. Valor original do boleto</label>
-            <input id="valorBole" name="valorBoleto" type="text" class="input valorbole">
+	<div class="content">
+		<div class="box entrada_dados">
+			<h2 class="titulo01">calcular valor de uma obrigação atrasada a ser paga atraves de um boleto bancario.</h2>
+			<form>
+				<label for="idvalorBoleto">1. Valor original do boleto</label>
+				<input id="idvalorBoleto" name="valorBoleto" type="text" class="input valorbole">
 
-            <label for="dataVenc">02.Data de vencimento</label>
-            <input id="dataVenc" type="date" name="data de vencimento" class="input dataVenc" >
+				<label for="dataVencimento">02.Data de vencimento</label>
+				<input id="dataVencimento" type="date" name="data de vencimento" class="input dataVenc">
 
-            <label for="dataPag">03.Data do Pagamento</label>
-            <input id="dataPag" type="date" name="data do pagamanto" class="input dataPagamento">
+				<label for="dataPagamento">03.Data do Pagamento</label>
+				<input id="dataPagamento" type="date" name="data do pagamanto" class="input dataPagamento">
 
-            <label for="valorMul">04.valor da multa</label>
-            <input id="valorMul" type="text" name="valorDaMulta" class="input valorMulta" >
+				<label for="idvalorMulta">04.valor da multa</label>
+				<input id="idvalorMulta" type="text" name="valorDaMulta" class="input valorMulta">
 
-            <label for="valorMor">05.valor da mora</label>
-            <input id="valorMor" type="text" name="valorDaMora" class="input valorMora">
+				<label for="valorMor">05.valor da mora</label>
+				<input id="valorMor" type="text" name="valorDaMora" class="input valorMora">
 
-        </form>
-        <button onclick=" valueOfBillet (),conDaysLate(),fu_fineAmount(),fu_valueLives(),fu_interestDays(),
-                     fu_vjurosEmDinheiro(),fu_valorBoComvalorMo(),fu_valorTotal()">Resultado</button>
-    </div>
+			</form>
+			<button onclick="inpvalor_Boleto(),fu_valorMulta()">Resulted</button>
 
 
-    <div class="box saida_dados">
-        <h2 class="titulo02">Valor atualizado de um boleto bancário vencido.</h2>
+		</div>
 
-        <p>Valor do boleto --><span  id="vaBoleto">valor</span></p>
-        <p>Valor da multa --><span  id="vMulta">valor</span></p>
-        <p> Valor da mora:
-             <span class = "s" id="vMora">valor</span>% por <span  id="diasAtraso">valor</span> dias
-            (<span class = "s" id="qtd_JurosDias">valor</span>%):<span  id="vJ_emDinheiro">valor</span>
-        </p>
 
-        <p>Valor da fatura mais a mora: R$<span id="valorBoMo">valor</span></p>
-        <br>
-        <p>Valor final = valor com mora + valor da multa</p>
-        <p>Valor a ser pago: <span id="valorTotal">valor</span></p>
-        <hr>
-        <div class="conta_deposito">
-            <h2>conta para deposito</h2><br>
-            <p>AGÊNCIA 0602 </p>
-            <p>CONTA/CORRENTE: 4912-3</p>
-        </div>
+		<div class="box saida_dados">
+			<h2 class="titulo02">Valor atualizado de um boleto bancário vencido.</h2>
 
-    </div>
+			<p>Valor do boleto --><span id="spanvalorBoleto">valor</span></p>
+			<p>Valor da multa --><span id="spanvalorMulta">valor</span></p>
+			<p> Valor da mora:
+				<span class="s" id="vMora">valor</span>% por <span id="spanDiasEmAtraso">valor</span> dias
+				(<span class="s" id="qtd_JurosDias">valor</span>%):<span id="vJ_emDinheiro">valor</span>
+			</p>
 
-    </div>
+			<p>Valor da fatura mais a mora: R$<span id="valorBoMo">valor</span></p>
+			<br>
+			<p>Valor final = valor com mora + valor da multa</p>
+			<p>Valor a ser pago: <span id="valorTotal">valor</span></p>
+			<hr>
+			<div class="conta_deposito">
+				<h2>conta para deposito</h2><br>
+				<p>AGÊNCIA 0602 </p>
+				<p>CONTA/CORRENTE: 4912-3</p>
+			</div>
 
-    <script src="../test_impl/index.js"></script>
+		</div>
+
+	</div>
+
+	<script src="../js/index02.js"></script>
+
 </body>
+
 </html>
