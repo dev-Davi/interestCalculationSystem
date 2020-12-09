@@ -180,20 +180,27 @@
 				<label for="idvalorBoleto">1. Valor original do boleto</label>
 				<input id="idvalorBoleto" name="valorBoleto" type="text" class="input valorbole">
 
-				<label for="dataVencimento">02.Data de vencimento</label>
-				<input id="dataVencimento" type="date" name="data de vencimento" class="input dataVenc">
+				<label for="idDataVencimento">02.Data de vencimento</label>
+				<input id="idDataVencimento" type="date" name="data de vencimento" class="input dataVenc">
 
-				<label for="dataPagamento">03.Data do Pagamento</label>
-				<input id="dataPagamento" type="date" name="data do pagamanto" class="input dataPagamento">
+				<label for="idDataPagamento">03.Data do Pagamento</label>
+				<input id="idDataPagamento" type="date" name="data do pagamanto" class="input dataPagamento">
 
 				<label for="idvalorMulta">04.valor da multa</label>
 				<input id="idvalorMulta" type="text" name="valorDaMulta" class="input valorMulta">
 
-				<label for="valorMor">05.valor da mora</label>
-				<input id="valorMor" type="text" name="valorDaMora" class="input valorMora">
+				<label for="idValorMora">05.valor da mora</label>
+				<input id="idValorMora" type="text" name="valorDaMora" class="input valorMora">
 
 			</form>
-			<button onclick="inpvalor_Boleto(),fu_valorMulta()">Resulted</button>
+			<button onclick="inpvalor_Boleto(),
+				fu_valorMulta(),
+				fun_diasAtraso(),
+				fun_valorMora(),
+				fun_valorJuros(),
+				fun_valorJurosEmdinheiro(),
+				fun_valorTotal()">Resulted
+			</button>
 
 
 		</div>
@@ -205,14 +212,12 @@
 			<p>Valor do boleto --><span id="spanvalorBoleto">valor</span></p>
 			<p>Valor da multa --><span id="spanvalorMulta">valor</span></p>
 			<p> Valor da mora:
-				<span class="s" id="vMora">valor</span>% por <span id="spanDiasEmAtraso">valor</span> dias
-				(<span class="s" id="qtd_JurosDias">valor</span>%):<span id="vJ_emDinheiro">valor</span>
+				<span class="s" id="spanValorDaMora">valor</span>% por <span id="spanDiasEmAtraso">valor</span> dias
+				(<span class="s" id="spanValorJuros">valor</span>%):<span id="spanValorJurosEmDinheiro">valor</span>
 			</p>
-
-			<p>Valor da fatura mais a mora: R$<span id="valorBoMo">valor</span></p>
-			<br>
+			
 			<p>Valor final = valor com mora + valor da multa</p>
-			<p>Valor a ser pago: <span id="valorTotal">valor</span></p>
+			<p>Valor a ser pago: <span id="ValorTotal">valor</span></p>
 			<hr>
 			<div class="conta_deposito">
 				<h2>conta para deposito</h2><br>

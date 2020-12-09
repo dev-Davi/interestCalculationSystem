@@ -17,7 +17,7 @@ const spanValorboletoMaisValormora = document.getElementById('valorBoMo')
 const spanValorTotal = document.getElementById('valorTotal');
 
 //are destinada as funções ==>
-function fu_valorDoboleto() {
+/*function fu_valorDoboleto() {
 	let valorBole = inp_valorBoleto.value;
 	let resu_valorBo = parseFloat(valorBole);
 	return resu_valorBo.toLocaleString("pt-BR", {
@@ -67,7 +67,7 @@ function fu_valorMora() {
 	resu_valorMora = valorMor;
 	return resu_valorMora;
 }
-//are destinada a funções de converção de valores como valor da mora, multa e valor da fatura, valor total mais valor mora e da multa.
+ //are destinada a funções de converção de valores como valor da mora, multa e valor da fatura, valor total mais valor mora e da multa.
 function fu_jurosDias() {
 	//calculo para se obter a quantidade de dias.
 	var valorMor = inp_valorDaMora.value; //resgatando o valor colocado em valor da mora. 
@@ -112,7 +112,7 @@ function fu_vjurosEmDinheiro() {
 		currency: 'BRL'
 	});
 }
-
+*/
 function fu_valorBoComvalorMo() {
 	var valorBole = inp_valorBoleto.value;
 	var valorMor = inp_valorDaMora.value; //resgatando o valor colocado em valor da mora. 
