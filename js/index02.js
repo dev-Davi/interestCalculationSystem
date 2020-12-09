@@ -106,10 +106,4 @@ function fun_valorTotal() {
 	let total = (parseFloat(result_valorJuros) + parseFloat(valor_boleto));
 	let total02 = parseFloat(total + inpvalor_multa);
 	spanValorTotal.innerHTML = total02.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});	
-	console.log(valor_boleto)
-	console.log(inputValorMora)
-	console.log(inpvalor_multa)
-
-
-	
 }

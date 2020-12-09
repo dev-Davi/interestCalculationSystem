@@ -109,7 +109,4 @@ function fun_valorTotal() {
     style: 'currency',
     currency: 'BRL'
   });
-  console.log(valor_boleto);
-  console.log(inputValorMora);
-  console.log(inpvalor_multa);
 }
