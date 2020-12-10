@@ -1,6 +1,5 @@
 "use strict";
 
-//Valor do boleto
 function valorDoBoleto() {
   var spanvalor_boleto = document.getElementById('spanvalorBoleto');
   var valor_boleto = document.getElementById('idvalorBoleto').value;
