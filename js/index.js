@@ -7,7 +7,7 @@ function valorDoBoleto() {
 	}); 
 	spanvalor_boleto.innerHTML = valor_boleto;
 }
-//Valor da multa
+
 function valorDaMulta() {
 	let spanvalor_multa = document.getElementById('spanvalorMulta');
 	let inpvalor_multa = document.getElementById('idvalorMulta').value;
@@ -21,8 +21,7 @@ function valorDaMulta() {
 		currency:'BRL'
 	});
 }
-//Obtendo dias de atraso.
-function diasDeAtraso() {
+function obtendoDiasDeAtraso() {
 	let inputDataVencimento = document.getElementById('idDataVencimento').value
 	let inputDataPagamento = document.getElementById('idDataPagamento').value;
 	let spanDiasAtraso = document.getElementById('spanDiasEmAtraso');
@@ -34,15 +33,15 @@ function diasDeAtraso() {
 	spanDiasAtraso.innerHTML = (diferençaDeDias);
 
 }
-//valor da mora.
+
 function valorDaMora() {
 	let inputValorMora = document.getElementById('idValorMora').value;
 	let spanValorMora = document.getElementById('spanValorDaMora')
 	inputValorMora = parseFloat(inputValorMora);
 	spanValorMora.innerHTML = inputValorMora;
 }
-//valor porcentagem do juros.
-function valorDoJuros() {
+
+function porcentagemDoJuros() {
 	let inputDataVencimento = document.getElementById('idDataVencimento').value
 	let inputDataPagamento = document.getElementById('idDataPagamento').value;
 	let inputValorMora = document.getElementById('idValorMora').value;
@@ -58,7 +57,7 @@ function valorDoJuros() {
 	let result_valorJuros = parseFloat(diferençaDeDias * inputValorMora).toFixed(4);
 	spanJuros.innerHTML = result_valorJuros;
 }
-//valor do juros em dinheiro
+
 function valorDoJurosEmdinheiro() {
 	let inputDataVencimento = document.getElementById('idDataVencimento').value
 	let inputDataPagamento = document.getElementById('idDataPagamento').value;
@@ -81,8 +80,8 @@ function valorDoJurosEmdinheiro() {
 	
 	spanJurosDinheiro.innerHTML = resultado_valorJuros;
 }
-//valor total da fatura 
-function fun_valorTotal() {
+
+function ValorTotal() {
 	let inputDataVencimento = document.getElementById('idDataVencimento').value;
 	let inputDataPagamento = document.getElementById('idDataPagamento').value;
 	let valor_boleto = document.getElementById('idvalorBoleto').value;
@@ -104,3 +103,18 @@ function fun_valorTotal() {
 	let total02 = parseFloat(total + inpvalor_multa);
 	spanValorTotal.innerHTML = total02.toLocaleString('pt-BR', {style:'currency', currency:'BRL'});	
 }
+
+function init(){
+	const button = document.getElementById('btn_01')
+	button.addEventListener('click',() => {
+		valorDoBoleto()
+		valorDaMulta()
+		obtendoDiasDeAtraso()
+		valorDaMora()
+		porcentagemDoJuros()
+		valorDoJurosEmdinheiro()
+		ValorTotal()
+	})
+}
+
+window.addEventListener('DOMContentLoaded',init)
