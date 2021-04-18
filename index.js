@@ -1,6 +1,7 @@
 function valorDoBoleto() {
   let spanvalor_boleto = document.getElementById("spanvalorBoleto");
   let valor_boleto = document.getElementById("idvalorBoleto").value;
+
   valor_boleto = parseFloat(valor_boleto).toLocaleString("pt-BR", {
     style: "currency",
     currency: "BRL",
@@ -15,14 +16,11 @@ function valorDaMulta() {
 
   valor_boleto = parseFloat(valor_boleto);
   inpvalor_multa = parseInt(inpvalor_multa);
-  let result_valorMulta = Number.parseInt(valor_boleto * inpvalor_multa) / 100;
-  spanvalor_multa.innerHTML = parseFloat(result_valorMulta).toLocaleString(
-    "pt-BR",
-    {
-      style: "currency",
-      currency: "BRL",
-    }
-  );
+  let result_valorMulta = (valor_boleto * inpvalor_multa) / 100;
+  spanvalor_multa.innerHTML = result_valorMulta.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
 }
 function obtendoDiasDeAtraso() {
   let inputDataVencimento = document.getElementById("idDataVencimento").value;
