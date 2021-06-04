@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: -1px 2px 50px 0.3rem #d8d8d8;
+  padding: 15px 20px;
+  display: grid;
+  grid-template-areas: "header header" "section01 section02";
+  grid-template-columns: 500px 500px;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+}
+.container .header {
+  grid-area: header;
+  width: 100%;
+  max-width: 1140px;
+  height: 2.5rem;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+.container .header .header-title {
+  color: #1b1b1b;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  border-bottom: 2px solid #b600ff;
+  margin-left: 0.6rem;
+}
+.container .header .header-title .fas {
+  font-size: 1.2rem;
+  color: #b600ff;
+}
+
+.sc-entrada {
+  grid-area: section01;
+  height: 500px;
+}
+.sc-entrada .sc-form {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sc-entrada .sc-form label {
+  display: flex;
+  flex-direction: column;
+}
+.sc-entrada .sc-form label input {
+  border: 1px solid #b600ff;
+}
+
+.sc-saida {
+  grid-area: section02;
+  height: 500px;
+}
+.sc-saida .saida {
+  height: 68%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.sc-saida .saida article {
+  width: 100%;
+}
+.sc-saida .saida span {
+  width: 100%;
+  height: 17px;
+  border-bottom: 1px solid #b600ff;
+  display: block;
+}
+
+/*# sourceMappingURL=styles.css.map */
