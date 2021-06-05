@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #1b1b1b;
 }
 
 body {
   width: 100%;
+  background-color: #fff;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -21,13 +23,12 @@ body {
   box-shadow: -1px 2px 50px 0.3rem #d8d8d8;
   padding: 15px 20px;
   display: grid;
+  justify-content: space-around;
   grid-template-areas: "header header" "section01 section02";
   grid-template-columns: 500px 500px;
   grid-template-rows: 1fr;
-  justify-content: space-around;
 }
 .container .header {
-  grid-area: header;
   width: 100%;
   max-width: 1140px;
   height: 2.5rem;
@@ -37,13 +38,14 @@ body {
   justify-content: center;
   margin: 0 auto;
   margin-bottom: 2.5rem;
+  grid-area: header;
 }
 .container .header .header-title {
   color: #1b1b1b;
-  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 400;
   border-bottom: 2px solid #b600ff;
+  font-weight: 400;
   margin-left: 0.6rem;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 .container .header .header-title .fas {
   font-size: 1.2rem;
